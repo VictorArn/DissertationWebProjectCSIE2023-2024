@@ -1,1 +1,1 @@
-export const Addresses = "Addresses";
+export const Requests = "Requests";

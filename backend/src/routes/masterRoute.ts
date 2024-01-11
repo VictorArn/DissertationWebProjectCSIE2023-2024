@@ -1,5 +1,5 @@
 import express from 'express';
-import db from '../dbconfig';
+import db from '../dbConfig';
 
 let masterRouter = express.Router();
 

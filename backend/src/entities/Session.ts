@@ -1,4 +1,4 @@
-import db from '../dbconfig';
+import db from '../dbConfig';
 import Sequelize, { ModelDefined } from 'sequelize';
 
 export interface SessionAttributes{

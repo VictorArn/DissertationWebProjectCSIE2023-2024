@@ -1,21 +1,22 @@
-import db from'../dbconfig.js'
+import db from'../dbConfig.js'
 import Sequelize from 'sequelize';
 import { ModelDefined } from 'sequelize';
-// import { AddressAttributes } from './Address';
+import { RequestAttributes } from './Request';
 
 export interface StudentAttributes{
     StudentId : number,
     StudentName: string,
     StudentLastName: string,
     StudentYear: number,
-    // Addresses: AddressAttributes[]
+    Requests: RequestAttributes[]
    
 }
 
 
-export interface StudentCreationAttributes extends StudentAttributes {}
+export interface StudentCreationAttributes extends StudentAttributes {
+}
 
-const Student : ModelDefined<StudentAttributes, StudentCreationAttributes> = db.define("Student",  
+const Student : ModelDefined<StudentAttributes,StudentCreationAttributes> = db.define("Student",  
 {
     StudentId:
     {

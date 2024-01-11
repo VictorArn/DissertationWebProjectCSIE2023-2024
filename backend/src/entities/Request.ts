@@ -1,5 +1,6 @@
-import db from '../dbconfig';
+import db from '../dbConfig';
 import Sequelize, { ModelDefined } from 'sequelize';
+import { ProfessorAttributes } from './Professor';
 
 export interface RequestAttributes{
    RequestId: number,
@@ -7,7 +8,7 @@ export interface RequestAttributes{
    StudentId: number,
    RequestStatus: string,
    SignedDocument: string,
-
+    Professors : ProfessorAttributes[]
 }
 
 export interface RequestCreationAttributes extends RequestAttributes {}
@@ -21,6 +22,7 @@ const Request : ModelDefined<RequestAttributes,RequestCreationAttributes> = db.d
         autoIncrement: true,
         allowNull: false
     },
+
 
     ProfessorId: {
         type: Sequelize.INTEGER,
