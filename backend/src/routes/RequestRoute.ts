@@ -1,5 +1,5 @@
 import express from 'express';
-import RequestFilterDto from '../dataAccess/models/requestFilterDto';
+import RequestFilterDto from '../dataAccess/models/RequestFilterDto';
 import {  getRequestById, getRequest,
     createRequest,
     getFilteredRequests,

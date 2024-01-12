@@ -27,3 +27,5 @@ StudentRouter.route('/Student/:id').put( async (req, res) => {
   let id = parseInt(req.params.id) 
   return res.json(await updateStudent(req.body, id));
 })
+
+export default StudentRouter;
