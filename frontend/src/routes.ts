@@ -1,11 +1,12 @@
 import Contact from "./views/Contact";
 import Home from "./views/Home";
 import NotFound from "./views/NotFound";
+import RequestList from "./views/Requests";
 import Requests from "./views/Requests";
 import Sessions from "./views/Sessions";
 
 
-export const Routes = Object.freeze([
+export const routes = Object.freeze([
 
     {
         path: "/Home",
@@ -30,7 +31,7 @@ export const Routes = Object.freeze([
 
     {
         path: "/Requests",
-        component: Requests,
+        component: RequestList,
         name: "Reguests",
         //icon: RequestIcon
     },
