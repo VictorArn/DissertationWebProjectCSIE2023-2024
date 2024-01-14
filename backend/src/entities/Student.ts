@@ -1,4 +1,4 @@
-import db from'../dbConfig.js'
+import db from'../dbConfig'
 import Sequelize from 'sequelize';
 import { ModelDefined } from 'sequelize';
 import { RequestAttributes } from './Request';

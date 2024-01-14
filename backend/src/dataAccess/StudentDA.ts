@@ -2,7 +2,7 @@ import Student, { StudentCreationAttributes } from "../entities/Student";
 import Request from "../entities/Request";
 import {Requests} from "../entities/dbConst";
 import { Like } from "./operators";
-import StudentRequestFilterDto from "./models/studentRequestFilterDto";
+import StudentRequestFilterDto from "./models/StudentRequestFilterDto";
 import db from "../dbConfig";
 
 async function createStudent(student: StudentCreationAttributes) {

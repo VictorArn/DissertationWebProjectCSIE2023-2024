@@ -1,7 +1,7 @@
 import db from "../dbConfig";
 import Professor, { ProfessorCreationAttributes } from "../entities/Professor";
 import Request, { RequestCreationAttributes } from "../entities/Request";
-import RequestFilterDto from "./models/requestFilterDto";
+import RequestFilterDto from "./models/RequestFilterDto";
 import { Like } from "./operators";
 
 async function getRequest() {

@@ -3,8 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.15.4",
     "@mui/material": "^5.15.4",
+    "@mui/styled-engine": "^5.15.4",
     "@mui/styled-engine-sc": "^6.0.0-alpha.12",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -12,6 +15,8 @@
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.70",
     "@types/react": "^18.2.47",
+    "axios": "^1.6.5",
+    "cors": "^2.8.5",
     "lodash": "^4.17.21",
     "maxios": "^1.0.4",
     "react": "^18.2.0",
@@ -47,6 +52,8 @@
     ]
   },
   "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/lodash": "^4.14.202",
     "@types/react-dom": "^18.2.18"
   }
 }

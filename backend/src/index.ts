@@ -4,7 +4,8 @@ import cors from "cors";
 import db_init from "./entities/db_init";
 import masterRouter from "./routes/masterRoute";
 import RequestRoute from "./routes/RequestRoute";
-import StudentRoute from "./routes/StudentRoute"
+import StudentRoute from "./routes/StudentRoute";
+
 env.config();
 
 const app = express();

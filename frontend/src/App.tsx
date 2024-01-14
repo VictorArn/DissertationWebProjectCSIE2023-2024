@@ -3,13 +3,13 @@ import logo from './logo.svg';
 import './App.css';
 import { routes } from './routes';
 import { Route, Routes } from 'react-router-dom';
-//import ResponsiveAppBar from './components/Menu';
+import ResponsiveAppBar from './components/Menu';
 
 function App() {
   return (
     <div className="App">
 
-    {/* <ResponsiveAppBar/> */}
+    <ResponsiveAppBar/> 
 
       <Routes>
         {routes.map((r, index) => (

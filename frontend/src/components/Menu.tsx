@@ -134,7 +134,7 @@ function ResponsiveAppBar() {
                 startIcon = { <page.icon/> }
                 key={index}
                 onClick={() => navigation(page.path)}
-                sx={{ my: 2, color: '#7D0A0A', display: 'block'}}
+                sx={{ my: 2, color: '#6610f2', display: 'block'}}
               >
                 {page.name}
               </Button>

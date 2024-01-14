@@ -1,6 +1,6 @@
 import express from 'express';
 import {createStudent, getStudentById, getStudents, deleteStudent, updateStudent} from "../dataAccess/StudentDA"
-import StudentRequestFilterDto from '../dataAccess/models/studentRequestFilterDto';
+import StudentRequestFilterDto from '../dataAccess/models/StudentRequestFilterDto';
 
 let StudentRouter = express.Router();
   
