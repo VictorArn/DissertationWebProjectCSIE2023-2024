@@ -24,7 +24,7 @@ import AddCircleIcon from '@mui/icons-material/AddCircle';
 import BorderColorIcon from '@mui/icons-material/BorderColor';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import _ from "lodash";
 import TablePaginationAction from "../components/TablePaginationAction";
 
@@ -32,6 +32,7 @@ export default function RequestList() {
   const [requests, setRequests] = useState<PaginationResponse<RequestAttributes>>({ count: 0, rows: [] });
   const [rowsPerPage, setRowsPerPage] = useState(5);
   const [page, setPage] = useState(0);
+  const {id} = useParams();
   const [requestFilter, setRequestFilter] = useState<RequestFilterDto>({
     RequestId: 0,
     take: 5,
@@ -40,13 +41,20 @@ export default function RequestList() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    getRequests(requestFilter).then(d => {
-      setRequests(d);
-    });
-  }, []);
+    if(!id)
+        return;
+
+    get("/Request/", null, id).then(d => setRequests(d));
+}, [])
+
+  // useEffect(() => {
+  //   getRequests(requestFilter).then(d => {
+  //     setRequests(d);
+  //   });
+  // }, []);
 
   async function getRequests(requestFilter: RequestFilterDto) {
-    return (await get("/Requests", requestFilter)) as PaginationResponse<RequestAttributes>;
+    return (await get("/Request", requestFilter)) as PaginationResponse<RequestAttributes>;
   }
 
   function newRequest() {

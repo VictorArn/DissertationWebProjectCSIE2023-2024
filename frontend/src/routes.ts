@@ -37,9 +37,9 @@ export const routes = Object.freeze([
     },
 
     {
-        path: "/Requests",
+        path: "/Request",
         component: RequestList,
-        name: "Requests",
+        name: "Request",
         icon: RequestPageIcon
     },
 
