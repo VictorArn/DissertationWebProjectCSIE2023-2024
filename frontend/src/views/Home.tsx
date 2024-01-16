@@ -8,7 +8,7 @@ export default function Home(){
           <h1 style={{ color: "#6610f2" }}>Welcome to Dissertation App!</h1>
         </div>
         <div>
-          <img src={icon} alt="Icon" style={{ width: '450px', height: '500px' }} />
+          <img src={icon} alt="Icon" style={{ width: '900px', height: '900px' }} />
         </div>
       </Box>
     )    

@@ -187,8 +187,11 @@ export default function RequestList() {
         <Table sx={{ minWidth: 500 }} aria-label="custom pagination table">
           <TableHead>
             <TableRow>
-              <TableCell>Group Id</TableCell>
-              <TableCell>Group name</TableCell>
+            <TableCell>Request Id</TableCell>
+              <TableCell>Professor ID</TableCell>
+              <TableCell>Student Id</TableCell>
+              <TableCell>RequestStatus</TableCell>
+              <TableCell>Signed Document</TableCell>
               <TableCell>Edit</TableCell>
               <TableCell>Delete</TableCell>
             </TableRow>

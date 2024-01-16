@@ -1,7 +1,7 @@
 import mysql from 'mysql2/promise.js'
 import env from 'dotenv';
 import Professor from './Professor';
-import Request from './Request';
+import Requests from './Request';
 import Session from './Session';
 import Student from './Student';
 
@@ -11,8 +11,7 @@ function createDatabase(){
     mysql.createConnection({
     user : process.env.DB_USERNAME,
     password : process.env.DB_PASSWORD
-    })
-    .then((connection) => {   
+    }).then((connection) => {   
     return connection.query(`CREATE DATABASE IF NOT EXISTS ${process.env.DB_DATABASE}`)
     })    
     .catch((err) => {
@@ -28,11 +27,11 @@ function fkConfig()
         Professor.hasMany(Session, {as : "Sessions", foreignKey : "ProfessorId"});
         Session.belongsTo(Professor, {foreignKey : "ProfessorId"});
 
-        Student.hasMany(Request, {as : "Requests", foreignKey : "StudentId"});
-        Request.belongsTo(Student, {foreignKey : "StudentId"});
+        Student.hasMany(Requests, {as : "Requests", foreignKey : "StudentId"});
+        Requests.belongsTo(Student, {foreignKey : "StudentId"});
 
-        Professor.hasMany(Request, {as : "Requests", foreignKey : "ProfessorId"});
-        Request.belongsTo(Student, {foreignKey : "ProfessorId"});
+        Professor.hasMany(Requests, {as : "Requests", foreignKey : "ProfessorId"});
+        Requests.belongsTo(Professor, {foreignKey : "ProfessorId"});
 
         
 

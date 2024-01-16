@@ -36,12 +36,12 @@ RequestRoute.route('/Request/:id').delete( async (req, res) => {
   return res.json(await deleteRequests(id));
 })
 
-RequestRoute.route('/access-code/:id').get( async (req, res) => {
+RequestRoute.route('/Professor/:id').get( async (req, res) => {
   let id = parseInt(req.params.id)
   return res.json(await getRequestByProfessorId(id));
 });
 
-RequestRoute.route('/access-code/:id').get( async (req, res) => {
+RequestRoute.route('/Student/:id').get( async (req, res) => {
     let id = parseInt(req.params.id)
     return res.json(await getRequestByStudentId(id));
   });

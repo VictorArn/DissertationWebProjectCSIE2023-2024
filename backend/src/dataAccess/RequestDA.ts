@@ -18,7 +18,8 @@ async function getRequestById(id: number) {
 }
 
 async function createRequest(professor: RequestCreationAttributes) {
-  return await Request.create(professor, { include: [{ model: Professor, as: "Request" }] });
+  return await Request.create(professor);
+    // , { include: [{ model: Request, as: "Request" }] }
 
 }
 
